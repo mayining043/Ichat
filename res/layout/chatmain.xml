@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+	 <LinearLayout
+	     android:id="@+id/chat_title"
+	     android:layout_width="match_parent"
+	     android:layout_height="45dp"
+	     android:layout_alignParentTop="true"
+	     android:background="#222222" >
+
+	     <LinearLayout
+	         android:id="@+id/chat_backs"
+	         android:layout_width="wrap_content"
+	         android:layout_height="match_parent" >
+
+	         <ImageView
+	             android:layout_width="11dp"
+	             android:layout_height="wrap_content"
+	             android:layout_alignParentTop="true"
+	             android:layout_marginBottom="8dp"
+	             android:layout_marginLeft="4dp"
+	             android:layout_marginTop="8dp"
+	             android:background="@drawable/back" >
+	         </ImageView>
+
+	         <Button
+	             android:id="@+id/chat_back_button"
+	             android:layout_width="wrap_content"
+	             android:layout_height="match_parent"
+	             android:layout_margin="0dp"
+	             android:layout_weight="12"
+	             android:background="#222222"
+	             android:text="消息(0)"
+	             android:textColor="@android:color/white"
+	             android:textSize="8pt" />
+	     </LinearLayout>
+
+	     <TextView
+	         android:id="@+id/chat_contact_name"
+	         android:layout_width="200dp"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="center_vertical"
+	         android:layout_weight="0.07"
+	         android:gravity="center"
+	         android:text="mayining"
+	         android:textColor="@android:color/white"
+	         android:textSize="10pt" />
+
+		<LinearLayout
+		    android:layout_width="65dp"
+		    android:layout_height="match_parent"
+		    android:paddingLeft="25dp"
+		    >
+	
+		     <ImageButton
+		         android:id="@+id/chat_contact_button"
+		         android:layout_width="36dp"
+		         android:layout_height="match_parent"
+		         android:layout_margin="4dp"
+		         android:layout_weight="0.00"
+		         android:background="@drawable/person" />
+		</LinearLayout>
+	 </LinearLayout>
+	
+    <LinearLayout 
+        android:id="@+id/linear_sent"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:background="#222222"
+    	android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/input_text"
+            
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	android:textColor="#fff"
+        	android:hint="请在此输入聊天"
+        	android:maxLines="2" />
+        <Button
+            android:id="@+id/send"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="#fff"
+        	android:text="发送"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/msg_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_title"
+        android:layout_above="@id/linear_sent"
+        android:divider="#0000" 
+        android:transcriptMode="normal"
+        android:fadingEdge="none"
+		android:fastScrollEnabled="true"
+		android:background="@drawable/bgm">
+    </ListView>
+    
+</RelativeLayout>
